@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="left">
+    ☰ <span class="logo">YouTube</span>
+  </div>
+
+  <div class="search-box">
+    <input type="text" id="search" placeholder="Search">
+  </div>
+
+  <div class="right">
+    🔔 👤
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <p onclick="filter('all')">🏠 Home</p>
+  <p onclick="filter('shorts')">🎬 Shorts</p>
+  <p onclick="filter('tech')">💻 Tech</p>
+  <p onclick="filter('music')">🎵 Music</p>
+</aside>
+
+<!-- CATEGORY BAR -->
+<div class="categories">
+  <button onclick="filter('all')">All</button>
+  <button onclick="filter('tech')">Tech</button>
+  <button onclick="filter('gaming')">Gaming</button>
+  <button onclick="filter('music')">Music</button>
+  <button onclick="filter('shorts')">Shorts</button>
+</div>
+
+<!-- MAIN -->
+<main class="main">
+  <div id="videos" class="grid"></div>
+</main>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeVideo()" class="close">✖</span>
+    <iframe id="player" allowfullscreen></iframe>
+    <h3 id="title"></h3>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
